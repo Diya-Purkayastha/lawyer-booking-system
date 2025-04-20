@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/vZCmBvW/lawyer1.jpg",
+      "name": "Sophia Martinez",
+      "speciality": "Family Law",
+      "experience": 8,
+      "licenseNumber": "FL-2021-11234",
+      "fees": 150,
+      "availability": ["Monday", "Wednesday", "Friday"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/hDKvVVF/lawyer2.jpg",
+      "name": "Daniel Thompson",
+      "speciality": "Criminal Defense",
+      "experience": 12,
+      "licenseNumber": "CD-2016-84591",
+      "fees": 200,
+      "availability": ["Tuesday", "Thursday"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/9rgBtfm/lawyer3.jpg",
+      "name": "Ayesha Khan",
+      "speciality": "Immigration Law",
+      "experience": 10,
+      "licenseNumber": "IM-2018-32341",
+      "fees": 180,
+      "availability": ["Monday", "Tuesday", "Friday"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/9bKkzRd/lawyer4.jpg",
+      "name": "James O'Connor",
+      "speciality": "Corporate Law",
+      "experience": 15,
+      "licenseNumber": "CL-2010-66829",
+      "fees": 250,
+      "availability": ["Wednesday", "Thursday"]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/K9ZLzT1/lawyer5.jpg",
+      "name": "Mei Ling",
+      "speciality": "Intellectual Property",
+      "experience": 7,
+      "licenseNumber": "IP-2022-49187",
+      "fees": 160,
+      "availability": ["Tuesday", "Thursday", "Saturday"]
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/Bz3ktvJ/lawyer6.jpg",
+      "name": "Robert Smith",
+      "speciality": "Real Estate Law",
+      "experience": 11,
+      "licenseNumber": "RE-2015-77813",
+      "fees": 190,
+      "availability": ["Monday", "Wednesday", "Friday"]
+    }
+  ]
+  
