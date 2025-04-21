@@ -4,6 +4,7 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToStoreDB, getStoredBook } from '../utility/addToDB';
 
 const LawyersDetails = () => {
 
@@ -15,10 +16,16 @@ const LawyersDetails = () => {
     const singleLawyer = data.find(lawyer => lawyer.id === parseInt(id))
     const {name, licenseNumber, speciality,experience, availability, fees} = singleLawyer;
    
-    const handleBookAppointment = ()=> {
-        toast("An Appointment is Booked");
-        
-    }
+    const handleBookAppointment = () => {
+        const storeBook = getStoredBook();
+        if (storeBook.includes(parseInt(id))) {
+            toast.error("You've already booked this lawyer.");
+        } else {
+            addToStoreDB(parseInt(id));
+            toast.success(`Appointment booked with ${name}`);
+        }
+    };
+    
 
     return (
        <div>
