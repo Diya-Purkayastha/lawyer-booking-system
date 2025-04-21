@@ -58,6 +58,69 @@
       "licenseNumber": "RE-2015-77813",
       "fees": 190,
       "availability": ["Monday", "Wednesday", "Friday"]
-    }
+    },
+    
+      {
+        "id": 7,
+        "image": "https://i.ibb.co/JFb9ybC/lawyer7.jpg",
+        "name": "Amara Patel",
+        "speciality": "Environmental Law",
+        "experience": 9,
+        "licenseNumber": "EN-2017-55892",
+        "fees": 170,
+        "availability": ["Tuesday", "Thursday", "Saturday"]
+      },
+      {
+        "id": 8,
+        "image": "https://i.ibb.co/pdP9LfF/lawyer8.jpg",
+        "name": "Liam Johnson",
+        "speciality": "Labor Law",
+        "experience": 13,
+        "licenseNumber": "LB-2012-94731",
+        "fees": 220,
+        "availability": ["Monday", "Wednesday"]
+      },
+      {
+        "id": 9,
+        "image": "https://i.ibb.co/TMxMZZf/lawyer9.jpg",
+        "name": "Nina Rodriguez",
+        "speciality": "Bankruptcy Law",
+        "experience": 6,
+        "licenseNumber": "BK-2020-63415",
+        "fees": 140,
+        "availability": ["Tuesday", "Friday"]
+      },
+      {
+        "id": 10,
+        "image": "https://i.ibb.co/v3zTfGp/lawyer10.jpg",
+        "name": "George Kim",
+        "speciality": "Tax Law",
+        "experience": 11,
+        "licenseNumber": "TX-2014-71229",
+        "fees": 210,
+        "availability": ["Wednesday", "Thursday", "Saturday"]
+      },
+      {
+        "id": 11,
+        "image": "https://i.ibb.co/Y0X7t1s/lawyer11.jpg",
+        "name": "Fatima Noor",
+        "speciality": "Civil Rights Law",
+        "experience": 8,
+        "licenseNumber": "CR-2016-11994",
+        "fees": 180,
+        "availability": ["Monday", "Friday"]
+      },
+      {
+        "id": 12,
+        "image": "https://i.ibb.co/d0CbVNb/lawyer12.jpg",
+        "name": "Ethan Lee",
+        "speciality": "Entertainment Law",
+        "experience": 10,
+        "licenseNumber": "ET-2015-39284",
+        "fees": 230,
+        "availability": ["Tuesday", "Thursday", "Friday"]
+      }
+    
+    
   ]
   

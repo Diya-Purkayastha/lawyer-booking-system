@@ -2,6 +2,7 @@
 import Hero from '../components/Hero';
 import { useLoaderData } from 'react-router';
 import LawyerContainer from '../components/LawyerContainer';
+import HomeCounter from '../components/HomeCounter';
 
 
 const Home = () => {
@@ -13,8 +14,7 @@ const Home = () => {
         <div>
             <Hero></Hero>
             <LawyerContainer lawyers={data}></LawyerContainer>
-
-            
+            <HomeCounter></HomeCounter>
             
         </div>
     );

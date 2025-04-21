@@ -12,7 +12,7 @@ const LawyerContainer = ({lawyers}) => {
           setDisplayLawyer(lawyers);
       }
       else{
-          setDisplayLawyer((lawyers).slice(0,4))
+          setDisplayLawyer((lawyers).slice(0,6))
           
       }
   }, [lawyers, showAll]);
