@@ -1,16 +1,22 @@
 import React from 'react';
 import { useLoaderData, useParams, Link } from 'react-router';
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { ToastContainer, toast } from 'react-toastify';
 
 const LawyersDetails = () => {
 
+    
     const data = useLoaderData()
 
     const {id} = useParams();
     
     const singleLawyer = data.find(lawyer => lawyer.id === parseInt(id))
     const {name, licenseNumber, speciality,experience, availability, fees} = singleLawyer;
+   
+    const handleBookAppointment = ()=>{
+        toast("Wow so easy!");
 
+    }
 
     return (
        <div>
@@ -29,7 +35,7 @@ const LawyersDetails = () => {
                 {name}
                 
                 </h2>
-              
+                <ToastContainer />
                <p className='text-gray-500 inline mr-4'>{speciality}</p>
                <p className='text-gray-500 inline'>License No: {licenseNumber}</p>
                <div className='flex gap-4'>
@@ -62,8 +68,8 @@ const LawyersDetails = () => {
             </div> 
             
              
-             <Link>
-               <button className="cursor-pointer w-full py-2 text-xl text-center text-white transition-colors duration-300 hover:bg-green-400 rounded-full bg-[#0EA106] ease px-8 ">Book an Appointment</button>
+             <Link to='/my-bookings' state={{id}}>
+               <button onClick={()=> handleBookAppointment()} className="cursor-pointer w-full py-2 text-xl text-center text-white transition-colors duration-300 hover:bg-green-400 rounded-full bg-[#0EA106] ease px-8 ">Book an Appointment</button>
                </Link>
          </div>
        </div>
