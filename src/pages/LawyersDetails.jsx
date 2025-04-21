@@ -1,7 +1,9 @@
 import React from 'react';
 import { useLoaderData, useParams, Link } from 'react-router';
 import { IoIosInformationCircleOutline } from "react-icons/io";
-import { ToastContainer, toast } from 'react-toastify';
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LawyersDetails = () => {
 
@@ -13,13 +15,17 @@ const LawyersDetails = () => {
     const singleLawyer = data.find(lawyer => lawyer.id === parseInt(id))
     const {name, licenseNumber, speciality,experience, availability, fees} = singleLawyer;
    
-    const handleBookAppointment = ()=>{
-        toast("Wow so easy!");
-
+    const handleBookAppointment = ()=> {
+        toast("An Appointment is Booked");
+        
     }
 
     return (
        <div>
+         <div className='py-25 px-10 bg-stone-100 rounded-xl my-15 space-y-4'>
+            <h1 className='text-center text-4xl '>Lawyer’s Profile Details</h1>
+            <p className='text-center max-w-4xl mx-auto'>The Lawyer’s Profile displays essential details such as name, specialization, experience, and contact information. It helps clients quickly assess and choose the right legal professional for their needs.</p>
+            </div>
              <div className="card bg-base-100 p-4 card-side shadow-sm lg:gap-4 my-4">
             <figure className='w-2/6'>
                 <img
@@ -35,7 +41,7 @@ const LawyersDetails = () => {
                 {name}
                 
                 </h2>
-                <ToastContainer />
+                
                <p className='text-gray-500 inline mr-4'>{speciality}</p>
                <p className='text-gray-500 inline'>License No: {licenseNumber}</p>
                <div className='flex gap-4'>
@@ -63,13 +69,13 @@ const LawyersDetails = () => {
                 Lawyer  Available Today
                     </div>
              </div>
-             <div className="badge  bg-yellow-100 py-3 text-yellow-600"> <IoIosInformationCircleOutline size={20}/>
+             <div className=" flex gap-2 rounded-2xl justify-center items-center bg-yellow-100 py-2 text-yellow-600"> <IoIosInformationCircleOutline size={20}/>
              Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
             </div> 
             
              
              <Link to='/my-bookings' state={{id}}>
-               <button onClick={()=> handleBookAppointment()} className="cursor-pointer w-full py-2 text-xl text-center text-white transition-colors duration-300 hover:bg-green-400 rounded-full bg-[#0EA106] ease px-8 ">Book an Appointment</button>
+               <button onClick={handleBookAppointment} className="cursor-pointer w-full py-2 text-xl text-center text-white transition-colors duration-300 hover:bg-green-400 rounded-full bg-[#0EA106] ease px-8 ">Book an Appointment</button>
                </Link>
          </div>
        </div>

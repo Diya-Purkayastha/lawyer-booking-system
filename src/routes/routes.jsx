@@ -5,12 +5,14 @@ import MyBookings from "../pages/MyBookings";
 import Blogs from "../pages/Blogs";
 import ContactUs from "../pages/ContactUs";
 import LawyersDetails from "../pages/LawyersDetails";
+import ErrorPage from "../pages/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
       path:'/',
       Component:Mainlayout,
+      errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
           index: true,
