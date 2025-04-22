@@ -6,6 +6,7 @@ import Blogs from "../pages/Blogs";
 import ContactUs from "../pages/ContactUs";
 import LawyersDetails from "../pages/LawyersDetails";
 import ErrorPage from "../pages/ErrorPage";
+import Loader from "../components/Loader";
 
 
 export const router = createBrowserRouter([
@@ -15,20 +16,23 @@ export const router = createBrowserRouter([
       errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
-          index: true,
+          index: '/',
           Component:Home,
-          hydrateFallbackElement: <span className="loading loading-bars loading-xl"></span>,
+          hydrateFallbackElement: <Loader></Loader>,
           loader:()=> fetch('../lawyerData.json')
         },
         {
             path:'/my-bookings',
             Component:MyBookings,
-            hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>,
+            hydrateFallbackElement:<Loader></Loader>,
             loader:()=> fetch('../lawyerData.json')
+            
         },
         {
             path:'/blogs',
-            Component: Blogs     
+            Component: Blogs,
+            loader: ()=> fetch('../blog.json'),
+            hydrateFallbackElement: <Loader></Loader>  
         },
         {
             path:'/contact-us',
@@ -36,7 +40,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'/lawyersDetails/:id',
-          hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>,
+          hydrateFallbackElement:<Loader></Loader>,
           loader:()=> fetch('../lawyerData.json'),
           Component:LawyersDetails
         }
