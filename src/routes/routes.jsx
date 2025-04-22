@@ -17,12 +17,13 @@ export const router = createBrowserRouter([
         {
           index: true,
           Component:Home,
-          hydrateFallbackElement: <p>loading....</p>,
+          hydrateFallbackElement: <span className="loading loading-bars loading-xl"></span>,
           loader:()=> fetch('../lawyerData.json')
         },
         {
             path:'/my-bookings',
             Component:MyBookings,
+            hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>,
             loader:()=> fetch('../lawyerData.json')
         },
         {
@@ -35,6 +36,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'/lawyersDetails/:id',
+          hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>,
           loader:()=> fetch('../lawyerData.json'),
           Component:LawyersDetails
         }
