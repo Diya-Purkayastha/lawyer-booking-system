@@ -18,23 +18,23 @@ const HomeCounter = () => {
 
                 <div className='bg-stone-200 p-4 pl-8 rounded-xl space-y-3 '>
                     <img src={drimg} alt="" />
-                    <h1 className='text-5xl font-semibold'> <CountUp start={0} end={199} duration={2.5} separator="," enableScrollSpy />+</h1>
+                    <h1 className='text-5xl font-semibold'> <CountUp  end={199} duration={2.5} separator="," enableScrollSpy />+</h1>
                    
                     <p className='text-gray-500 '>Total Lawyer</p>
                 </div>
                 <div className='bg-stone-200 p-4 pl-8 rounded-xl space-y-3 '>
                     <img src={starimg} alt="" />
-                    <h1 className='text-5xl font-semibold'> <CountUp start={0} end={467} duration={2.5} enableScrollSpy separator="," />+</h1>
+                    <h1 className='text-5xl font-semibold'> <CountUp  end={467} duration={2.5} enableScrollSpy separator="," />+</h1>
                     <p className='text-gray-500 '>Total Reviews</p>
                 </div>
                 <div className='bg-stone-200 p-4 pl-8 rounded-xl space-y-3 '>
                     <img src={hultimg} alt="" />
-                    <h1 className='text-5xl font-semibold'> <CountUp start={0} end={1900} duration={2.5} enableScrollSpy separator="," />+</h1>
+                    <h1 className='text-5xl font-semibold'> <CountUp  end={1900} duration={2.5} enableScrollSpy separator="," />+</h1>
                     <p className='text-gray-500 '>Cases Initiated</p>
                 </div>
                 <div className='bg-stone-200 p-4 pl-8 rounded-xl space-y-3 '>
                     <img src={staffimg} alt="" />
-                    <h1 className='text-5xl font-semibold'> <CountUp start={0} end={300} duration={2.5} enableScrollSpy separator="," />+</h1>
+                    <h1 className='text-5xl font-semibold'> <CountUp end={300} duration={2.5} enableScrollSpy separator="," />+</h1>
                     <p className='text-gray-500 '>Total Stuff</p>
                 </div>
 
@@ -47,18 +47,4 @@ const HomeCounter = () => {
 
 export default HomeCounter;
 
-// import React from 'react';
-// import CountUp from 'react-countup';
 
-// const CounterUp = () => {
-//   return (
-//     <div className="text-center p-4">
-//       <h2 className="text-xl font-bold mb-2">Total Users</h2>
-//       <div className="text-4xl font-extrabold text-blue-600">
-//         <CountUp start={0} end={1000} duration={2.5} separator="," />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CounterUp;

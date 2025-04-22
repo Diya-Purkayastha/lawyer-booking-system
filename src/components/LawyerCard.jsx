@@ -11,7 +11,7 @@ const LawyerCard = ({singleLawyer}) => {
             <div className="card-body">
             <div className="card-actions justify-start">
                 <div className="badge bg-blue-100 py-3 text-blue-600">Experience: {experience}Yr</div>
-                <div className="badge  bg-green-100 py-3 text-green-600">{availability}</div>
+                <div className="badge  bg-green-100 py-3 text-green-600">{availability.length > 0 ? <h1>Available</h1> : '' }</div>
                 </div>
                 <h2 className="card-title">
                 {name}

@@ -5,14 +5,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Appointment = ({ AppointmentList, setAppointmentList }) => {
+const Appointment = ( {AppointmentList, setAppointmentList} ) => {
 
-        const handleCancelAppointment = (id) => {
-          const updatedList = AppointmentList.filter(item => item.id !== id);
+        const handleCancelAppointment = (licenseNumber) => {
+          const updatedList = AppointmentList.filter(item => item.licenseNumber !== licenseNumber);
           setAppointmentList(updatedList); 
       
          
-          localStorage.setItem('readList', JSON.stringify(updatedList.map(item => item.id)));
+          localStorage.setItem('AppointmentList', JSON.stringify(updatedList.map(item => item.licenseNumber)));
       
           toast.error("An Appointment is cancelled");
         };
@@ -31,8 +31,8 @@ const Appointment = ({ AppointmentList, setAppointmentList }) => {
       <div className='px-3 md:px-0'>
         <h1 className='text-center text-4xl font-semibold '>My Today Appointments</h1>
         <p className='text-center text-gray-400 max-w-4xl mx-auto'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
-        {AppointmentList.map(({ id, name, speciality, fees }) => (
-          <div key={id} className='bg-base-100 shadow-sm my-10 space-y-8 p-6'>
+        {AppointmentList.map(({ licenseNumber, name, speciality, fees }) => (
+          <div key={licenseNumber} className='bg-base-100 shadow-sm my-10 space-y-8 p-6'>
             <div className='flex flex-col md:flex-row justify-center md:justify-between items-center border-y-1 border-dashed py-3 px-4 border-gray-300'>
               <div>
                 <h1 className='font-semibold text-xl'>{name}</h1>
@@ -45,7 +45,7 @@ const Appointment = ({ AppointmentList, setAppointmentList }) => {
               </div>
             </div>
   
-            <button onClick={() => handleCancelAppointment(id)} className="btn-outline cursor-pointer w-full py-2 text-xl text-center btn transition-colors duration-300 hover:bg-red-300 hover:text-black rounded-full text-red-500 ease px-8">
+            <button onClick={() => handleCancelAppointment(licenseNumber)} className="btn-outline cursor-pointer w-full py-2 text-xl text-center btn transition-colors duration-300 hover:bg-red-300 hover:text-black rounded-full text-red-500 ease px-8">
               Cancel Appointment
             </button>
           </div>
