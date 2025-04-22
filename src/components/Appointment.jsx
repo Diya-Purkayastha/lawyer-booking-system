@@ -5,20 +5,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Appointment = ({ ReadList, setReadList }) => {
+const Appointment = ({ AppointmentList, setAppointmentList }) => {
 
         const handleCancelAppointment = (id) => {
-          const updatedList = ReadList.filter(item => item.id !== id);
-          setReadList(updatedList); 
+          const updatedList = AppointmentList.filter(item => item.id !== id);
+          setAppointmentList(updatedList); 
       
          
           localStorage.setItem('readList', JSON.stringify(updatedList.map(item => item.id)));
       
-          toast("An Appointment is cancelled");
+          toast.error("An Appointment is cancelled");
         };
       
   
-    if (ReadList.length === 0) {
+    if (AppointmentList.length === 0) {
       return (
         <div className='text-center my-10'>
           <h1 className='text-2xl'>No Appointments Found</h1>
@@ -31,7 +31,7 @@ const Appointment = ({ ReadList, setReadList }) => {
       <div>
         <h1 className='text-center text-4xl font-semibold '>My Today Appointments</h1>
         <p className='text-center text-gray-400 max-w-4xl mx-auto'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
-        {ReadList.map(({ id, name, speciality, fees }) => (
+        {AppointmentList.map(({ id, name, speciality, fees }) => (
           <div key={id} className='bg-base-100 shadow-sm my-10 space-y-8 p-6'>
             <div className='flex justify-between items-center border-y-1 border-dashed py-3 px-4 border-gray-300'>
               <div>

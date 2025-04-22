@@ -1,6 +1,6 @@
 //get from localstorage 
 const getStoredBook = () =>{
-    const storeSTR = localStorage.getItem("readList");
+    const storeSTR = localStorage.getItem("AppointmentList");
 
     if(storeSTR){
         const storeAppointment = JSON.parse(storeSTR)
@@ -13,10 +13,10 @@ const getStoredBook = () =>{
 
 //add to DB
 const addToStoreDB = (id) => {
-    const storeBook = getStoredBook();
-    if (!storeBook.includes(id)) {
-        storeBook.push(id);
-        localStorage.setItem("readList", JSON.stringify(storeBook));
+    const storeAppointmentList = getStoredBook();
+    if (!storeAppointmentList.includes(id)) {
+        storeAppointmentList.push(id);
+        localStorage.setItem("AppointmentList", JSON.stringify(storeAppointmentList));
     }
 };
 

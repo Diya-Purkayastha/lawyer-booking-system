@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Appointment from '../components/Appointment';
-import { Link, useLoaderData,useLocation } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import Chart from '../components/Chart';
 import Buttons from '../utility/Buttons';
 import { getStoredBook } from '../utility/addToDB';
 
 const MyBookings = () => {
     const data = useLoaderData();
-    const location = useLocation();
-    const {id} = location.state || {};
     
-    const singleLawyer = data.find(lawyer => lawyer.id === parseInt(id))
-
-    const [ReadList , setReadList] = useState([])
+    const [AppointmentList , setAppointmentList] = useState([])
     useEffect(() => {
         const storedBookData = getStoredBook(); 
-        const myReadList = data.filter(book => storedBookData.includes(book.id));
-        setReadList(myReadList);
+        const myReadList = data.filter(app => storedBookData.includes(app.licenseNumber));
+        setAppointmentList(myReadList);
     }, [data]);
     
 
-    if (ReadList.length === 0) {
+    if (AppointmentList.length === 0) {
         return <div>
              <div className='py-25 px-10 bg-stone-100 rounded-xl my-15 space-y-2'>
             <h1 className='text-center  '>Lawyer’s Data Not Found</h1>
@@ -35,9 +31,9 @@ const MyBookings = () => {
 
     return (
         <div className='my-5'>
-            <Chart ReadList={ReadList} ></Chart>
+            <Chart AppointmentList={AppointmentList} ></Chart>
             
-            <Appointment ReadList={ReadList} setReadList={setReadList} />
+            <Appointment AppointmentList={AppointmentList} setAppointmentList={setAppointmentList} />
         </div>
     );
 };

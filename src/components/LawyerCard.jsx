@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const LawyerCard = ({singleLawyer}) => {
     
-    const {name, id, licenseNumber, speciality,experience, availability} = singleLawyer;
+    const {name, licenseNumber, speciality,experience, availability} = singleLawyer;
     return (
   
         <div className="card bg-base-100 p-4 card-side shadow-sm lg:gap-4">
@@ -23,7 +23,7 @@ const LawyerCard = ({singleLawyer}) => {
                 </h2>
                 <p className='text-gray-500'>{speciality}</p>
                 <p className='text-gray-500'>License No: {licenseNumber}</p>
-               <Link to={`/lawyersDetails/${id}`}>
+               <Link to={`/lawyersDetails/${licenseNumber}`}>
                <button className="btn btn-outline rounded-2xl text-blue-600">View Details</button>
                </Link>
             </div>

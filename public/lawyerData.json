@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "image": "https://i.ibb.co/vZCmBvW/lawyer1.jpg",
+      "image": "https://i.ibb.co.com/yc1ByqXD/s-n-t-t-vi-t-z-Ldau3-Sno7-Y-unsplash.jpg",
       "name": "Sophia Martinez",
       "speciality": "Family Law",
       "experience": 8,
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "image": "https://i.ibb.co/hDKvVVF/lawyer2.jpg",
+      "image": "https://i.ibb.co.com/Dfq5Bgf0/tran-nhu-tuan-ob-FCiz9ni-ZE-unsplash.jpg",
       "name": "Daniel Thompson",
       "speciality": "Criminal Defense",
       "experience": 12,
@@ -21,7 +21,7 @@
     },
     {
       "id": 3,
-      "image": "https://i.ibb.co/9rgBtfm/lawyer3.jpg",
+      "image": "https://i.ibb.co.com/mVdNShzj/ph-m-duy-quang-QGr6-H7pri-Q-unsplash.jpg",
       "name": "Ayesha Khan",
       "speciality": "Immigration Law",
       "experience": 10,
@@ -31,7 +31,7 @@
     },
     {
       "id": 4,
-      "image": "https://i.ibb.co/9bKkzRd/lawyer4.jpg",
+      "image": "https://i.ibb.co.com/fmRSnRN/osama-madlom-g0-SOKIBDFds-unsplash.jpg",
       "name": "James O'Connor",
       "speciality": "Corporate Law",
       "experience": 15,
@@ -41,7 +41,7 @@
     },
     {
       "id": 5,
-      "image": "https://i.ibb.co/K9ZLzT1/lawyer5.jpg",
+      "image": "https://i.ibb.co.com/rKgF8Knw/nussbaum-law-T4w6f2-Jrn-AM-unsplash.jpg",
       "name": "Mei Ling",
       "speciality": "Intellectual Property",
       "experience": 7,
@@ -51,7 +51,7 @@
     },
     {
       "id": 6,
-      "image": "https://i.ibb.co/Bz3ktvJ/lawyer6.jpg",
+      "image": "https://i.ibb.co.com/Fkxsfzjv/nussbaum-law-IOvs-EAEjn-DE-unsplash.jpg",
       "name": "Robert Smith",
       "speciality": "Real Estate Law",
       "experience": 11,
@@ -62,7 +62,7 @@
     
       {
         "id": 7,
-        "image": "https://i.ibb.co/JFb9ybC/lawyer7.jpg",
+        "image": "https://i.ibb.co.com/2xV8WTd/nussbaum-law-ea3-STz-N7-Lw8-unsplash.jpg",
         "name": "Amara Patel",
         "speciality": "Environmental Law",
         "experience": 9,
@@ -72,7 +72,7 @@
       },
       {
         "id": 8,
-        "image": "https://i.ibb.co/pdP9LfF/lawyer8.jpg",
+        "image": "https://i.ibb.co.com/Xk7X41JQ/nussbaum-law-1q-JPd-NWQSC8-unsplash.jpg",
         "name": "Liam Johnson",
         "speciality": "Labor Law",
         "experience": 13,
@@ -82,7 +82,7 @@
       },
       {
         "id": 9,
-        "image": "https://i.ibb.co/TMxMZZf/lawyer9.jpg",
+        "image": "https://i.ibb.co.com/Q76rzb22/mohamad-khosravi-ikjv-Pf-C3pb-I-unsplash.jpg",
         "name": "Nina Rodriguez",
         "speciality": "Bankruptcy Law",
         "experience": 6,
@@ -92,7 +92,7 @@
       },
       {
         "id": 10,
-        "image": "https://i.ibb.co/v3zTfGp/lawyer10.jpg",
+        "image": "https://i.ibb.co.com/fmRSnRN/osama-madlom-g0-SOKIBDFds-unsplash.jpg",
         "name": "George Kim",
         "speciality": "Tax Law",
         "experience": 11,
@@ -102,7 +102,7 @@
       },
       {
         "id": 11,
-        "image": "https://i.ibb.co/Y0X7t1s/lawyer11.jpg",
+        "image": "https://i.ibb.co.com/rKgF8Knw/nussbaum-law-T4w6f2-Jrn-AM-unsplash.jpg",
         "name": "Fatima Noor",
         "speciality": "Civil Rights Law",
         "experience": 8,
@@ -112,7 +112,7 @@
       },
       {
         "id": 12,
-        "image": "https://i.ibb.co/d0CbVNb/lawyer12.jpg",
+        "image": "https://i.ibb.co.com/Q76rzb22/mohamad-khosravi-ikjv-Pf-C3pb-I-unsplash.jpg",
         "name": "Ethan Lee",
         "speciality": "Entertainment Law",
         "experience": 10,

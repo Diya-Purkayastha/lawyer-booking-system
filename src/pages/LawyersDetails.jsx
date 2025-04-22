@@ -11,20 +11,30 @@ const LawyersDetails = () => {
     
     const data = useLoaderData()
 
-    const {id} = useParams();
+    const {licenseNumber} = useParams();
+ 
     
-    const singleLawyer = data.find(lawyer => lawyer.id === parseInt(id))
-    const {name, licenseNumber, speciality,experience, availability, fees} = singleLawyer;
+    const singleLawyer = data.find(lawyer => lawyer.licenseNumber === (licenseNumber))
+    
+    const {name,  speciality,experience, availability, fees} = singleLawyer;
    
     const handleBookAppointment = () => {
         const storeBook = getStoredBook();
-        if (storeBook.includes(parseInt(id))) {
+        if (storeBook.includes(licenseNumber)) {
             toast.error("You've already booked this lawyer.");
         } else {
-            addToStoreDB(parseInt(id));
+            addToStoreDB(licenseNumber);
             toast.success(`Appointment booked with ${name}`);
         }
     };
+    if (!singleLawyer) {
+        return (
+          <div className="p-5 text-red-500">
+            <h1 className="text-xl font-bold">Lawyer not found</h1>
+            <Link to="/" className="text-blue-600 underline">Go back</Link>
+          </div>
+        );
+      }
     
 
     return (
@@ -81,7 +91,7 @@ const LawyersDetails = () => {
             </div> 
             
              
-             <Link to='/my-bookings' state={{id}}>
+             <Link to='/my-bookings' state={{licenseNumber}}>
                <button onClick={handleBookAppointment} className="cursor-pointer w-full py-2 text-xl text-center text-white transition-colors duration-300 hover:bg-green-400 rounded-full bg-[#0EA106] ease px-8 ">Book an Appointment</button>
                </Link>
          </div>

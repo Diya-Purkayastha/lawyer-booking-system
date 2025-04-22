@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
             Component:ContactUs
         },
         {
-          path:'/lawyersDetails/:id',
+          path:'/lawyersDetails/:licenseNumber',
           hydrateFallbackElement:<Loader></Loader>,
           loader:()=> fetch('../lawyerData.json'),
           Component:LawyersDetails

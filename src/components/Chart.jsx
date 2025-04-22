@@ -17,9 +17,9 @@ const TriangleBar = (props) => {
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
-const Chart = ({ ReadList }) => {
+const Chart = ({ AppointmentList }) => {
   
-  const singleData = ReadList; 
+  const singleData = AppointmentList; 
 
   return (
     <div className=' "w-full h-[500px] flex justify-center mt-10 mb-20'>

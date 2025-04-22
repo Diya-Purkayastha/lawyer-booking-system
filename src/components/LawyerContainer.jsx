@@ -25,7 +25,7 @@ const LawyerContainer = ({lawyers}) => {
            </div>
            <div className='grid grid-cols-1 md:grid-cols-2  gap-4 lg:gap-8 my-8'>
              {
-                displayLawyer.map(lawyer => <LawyerCard singleLawyer={lawyer} key={lawyer.id}></LawyerCard>)
+                displayLawyer.map(lawyer => <LawyerCard singleLawyer={lawyer} key={lawyer.licenseNumber}></LawyerCard>)
              }
            </div>
            <div className='flex justify-center'>
