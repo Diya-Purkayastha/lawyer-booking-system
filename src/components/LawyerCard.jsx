@@ -3,15 +3,11 @@ import { Link } from 'react-router';
 
 const LawyerCard = ({singleLawyer}) => {
     
-    const {name, licenseNumber, speciality,experience, availability} = singleLawyer;
+    const {name,image, licenseNumber, speciality,experience, availability} = singleLawyer;
     return (
   
         <div className="card bg-base-100 p-4 card-side shadow-sm lg:gap-4">
-            <figure className='w-2/6'>
-                <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes" />
-            </figure>
+           <img src={image} alt="Lawyer" className="w-[200px] h-[200px] object-cover rounded-xl" />
             <div className="card-body">
             <div className="card-actions justify-start">
                 <div className="badge bg-blue-100 py-3 text-blue-600">Experience: {experience}Yr</div>

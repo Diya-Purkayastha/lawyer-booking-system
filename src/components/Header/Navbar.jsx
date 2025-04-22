@@ -6,7 +6,7 @@ import Buttons from '../../utility/Buttons';
 
 const Navbar = () => {
     return (
-        <div className="navbar shadow-sm bg-base-100 p-0 max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 xl:px-24">
+        <div className="navbar shadow-sm lg:shadow-none bg-base-100 p-0 max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 xl:px-24">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="cursor-pointer lg:hidden">

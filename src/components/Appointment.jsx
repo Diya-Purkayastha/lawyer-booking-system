@@ -28,18 +28,20 @@ const Appointment = ({ AppointmentList, setAppointmentList }) => {
     }
   
     return (
-      <div>
+      <div className='px-3 md:px-0'>
         <h1 className='text-center text-4xl font-semibold '>My Today Appointments</h1>
         <p className='text-center text-gray-400 max-w-4xl mx-auto'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
         {AppointmentList.map(({ id, name, speciality, fees }) => (
           <div key={id} className='bg-base-100 shadow-sm my-10 space-y-8 p-6'>
-            <div className='flex justify-between items-center border-y-1 border-dashed py-3 px-4 border-gray-300'>
+            <div className='flex flex-col md:flex-row justify-center md:justify-between items-center border-y-1 border-dashed py-3 px-4 border-gray-300'>
               <div>
                 <h1 className='font-semibold text-xl'>{name}</h1>
                 <h4 className='text-gray-400'>{speciality}</h4>
               </div>
-              <div className="badge bg-green-100 py-3 text-green-600 text-lg">
+              <div>
+                <h1 className="badge bg-green-100 py-5 md:py-3 text-green-600 text-lg">
                 Appointment Fee: {fees} Taka
+                </h1>
               </div>
             </div>
   

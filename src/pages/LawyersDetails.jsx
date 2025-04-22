@@ -16,7 +16,7 @@ const LawyersDetails = () => {
     
     const singleLawyer = data.find(lawyer => lawyer.licenseNumber === (licenseNumber))
     
-    const {name,  speciality,experience, availability, fees} = singleLawyer;
+    const {name, image,  speciality,experience, availability, fees} = singleLawyer;
    
     const handleBookAppointment = () => {
         const storeBook = getStoredBook();
@@ -43,13 +43,9 @@ const LawyersDetails = () => {
             <h1 className='text-center text-4xl '>Lawyer’s Profile Details</h1>
             <p className='text-center max-w-4xl mx-auto'>The Lawyer’s Profile displays essential details such as name, specialization, experience, and contact information. It helps clients quickly assess and choose the right legal professional for their needs.</p>
             </div>
-             <div className="card bg-base-100 p-4 card-side shadow-sm lg:gap-4 my-4">
-            <figure className='w-2/6'>
-                <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes" />
-            </figure>
-            <div className="card-body space-y-0">
+             <div className="flex flex-col lg:flex-row items-center bg-white rounded-xl shadow-md p-6 gap-6 my-10">
+             <img src={image} alt="Lawyer" className="w-[300px] h-[300px] object-cover rounded-xl" />
+            <div className="card-body space-y-2">
             <div className="card-actions justify-start">
                 <div className="badge bg-blue-100 py-3 text-blue-600">Experience: {experience}Yr</div>
                 
