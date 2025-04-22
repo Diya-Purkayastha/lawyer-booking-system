@@ -1,10 +1,10 @@
 //get from localstorage 
 const getStoredBook = () =>{
-    const storedBookSTR = localStorage.getItem("readList");
+    const storeSTR = localStorage.getItem("readList");
 
-    if(storedBookSTR){
-        const storeBook = JSON.parse(storedBookSTR)
-        return storeBook;
+    if(storeSTR){
+        const storeAppointment = JSON.parse(storeSTR)
+        return storeAppointment;
     }
     else{
         return [];

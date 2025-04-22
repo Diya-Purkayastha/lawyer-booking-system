@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResponsiveContainer } from 'recharts';
 
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 
@@ -21,7 +22,8 @@ const Chart = ({ ReadList }) => {
   const singleData = ReadList; 
 
   return (
-    <div className=' flex justify-center w-full mx-auto'>
+    <div className=' "w-full h-[500px] flex justify-center mt-10 mb-20'>
+      <ResponsiveContainer width="90%" height="100%"> 
       <BarChart
         width={500}
         height={300}
@@ -35,6 +37,7 @@ const Chart = ({ ReadList }) => {
           <Cell fill={colors[0]} />
         </Bar>
       </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };
