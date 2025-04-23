@@ -20,6 +20,9 @@ const ErrorPage = () => {
         <p className='mb-3 text-xl font-bold text-gray-900 md:text-2xl'>
           {error?.error?.message || 'Something Went Wrong!'}
         </p>
+        <p className='mb-6 text-gray-500'>
+          Tried to access: <span className="font-mono text-red-600">{location.pathname}</span>
+        </p>
         <Link to='/'>
           <Buttons name='Go To Homepage' />
         </Link>

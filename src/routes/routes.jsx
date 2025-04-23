@@ -43,6 +43,7 @@ export const router = createBrowserRouter([
           hydrateFallbackElement:<Loader></Loader>,
           loader:()=> fetch('../lawyerData.json'),
           Component:LawyersDetails
+          
         }
       ]
     }
