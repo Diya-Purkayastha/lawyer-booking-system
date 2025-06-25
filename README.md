@@ -48,7 +48,7 @@ To run this project locally, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/lawyer-appointment-app.git
+   git clone https://github.com/diya-purkayastha/lawyer-appointment-app.git
    cd lawyer-appointment-app
    ```
 
