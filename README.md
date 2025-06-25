@@ -1,177 +1,109 @@
-# 🧪 Lawyer Appointment Booking Application 
+# 🧪 Lawyer Appointment Booking Application
 
-Welcome, Developer!
+## 📖 Overview
 
-Your task is to build a React-based **Lawyer Appointment Booking Web App** that allows users to browse lawyer profiles and schedule appointments.  The application includes multiple pages, data persistence, interactive UI elements, routing, and visual representation using charts.
+Lawyer Appointment Booking is a React-based web application that allows users to explore verified lawyer profiles and book appointments with ease. The app provides a smooth navigation experience across multiple pages, a visually appealing UI, persistent data storage, and dynamic features like appointment charts and real-time counters.
 
----
-
-## ✅ Main Requirements
-
-### 🧭 Navbar (Visible on All Pages)
-
-- [ ] Display site **Logo** and **Site Name**
-- [ ] Add **4 Navigation Menu Items** (as per Figma)
-- [ ] Add a **button** at the right side (as per Figma)
-- [ ] Should be consistent on all pages including the error page
+**Live Site:** [https://lawyerbookings.netlify.app](https://lawyerbookings.netlify.app)
 
 ---
 
-### 🦶 Footer (Not Visible on Error Page)
+## 🚀 Features
 
-- [ ] Center-aligned **Logo**
-- [ ] Navigation menu items (as per Figma)
-- [ ] Include **3 Social Media Icons** that link to your personal profiles
-- [ ] Display footer on **all pages except error routes**
-
----
-
-## 🏠 Homepage
-
-### 🎯 Banner Section
-
-- [ ] Center-aligned heading and description (as per Figma)
-- [ ] Apply background image (as per Figma)
-
-### ⚖️ Lawyers Section
-
-- [ ] Add a section heading and text (as per Figma)
-- [ ] Display **6 lawyers** in a `3 x 2` grid format
-- [ ] Each Lawyer Card should include:
-  - [ ] Image
-  - [ ] Name
-  - [ ] Speciality
-  - [ ] Experience
-  - [ ] License Number
-  - [ ] “View Details” button → Navigates to Lawyer Details page
-
-### 🏆 Success Section
-
-- [ ] Show **4 Square Cards** with:
-  - Icon
-  - Number (with counting animation)
-  - Title
+- Fully responsive and user-friendly interface
+- Browse detailed lawyer profiles with specialization and availability
+- Book and cancel appointments (saved in localStorage)
+- View all bookings in a dedicated dashboard
+- Animated success metrics using `react-countup`
+- Recharts-based fee chart that updates on booking changes
+- Blogs section with key React concepts explained
+- Custom 404 error page with redirection
+- Route-based dynamic title and loading animations
+- Booking validation based on lawyer availability
 
 ---
 
-## 👨‍⚖️ Lawyer Details Page
+## 🧰 Technologies Used
 
-- [ ] Show a top info card titled “Lawyer’s Profile Details” and slogan as Figma
-- [ ] Display:
-  - [ ] Lawyer Image (left)
-  - [ ] Name, Experience, Speciality, Fee
-  - [ ] Availability (array of days)
-- [ ] Include Appointment Card with:
-  - Availability badge
-  - Book Now button
-
-### 🧾 Booking Logic
-
-- [ ] If appointment NOT already booked:
-  - Create new appointment
-  - Show **success toast** with lawyer’s name
-  - Navigate user to **Bookings page**
-- [ ] If already booked:
-  - Show **error toast**
-  - Do not create duplicate booking
+```json
+{
+  "@tailwindcss/vite": "^4.1.4",
+  "react": "^19.0.0",
+  "react-countup": "^6.5.3",
+  "react-dom": "^19.0.0",
+  "react-icons": "^5.5.0",
+  "react-router": "^7.5.1",
+  "react-toastify": "^11.0.5",
+  "recharts": "^2.15.3",
+  "tailwindcss": "^4.1.4"
+}
+````
 
 ---
 
-## 📅 Bookings Page
+## 💻 Local Setup Instructions
 
-- [ ] Show all booked appointments in **1-column card** format
-- Each card must display:
-  - Lawyer Name
-  - Fee
-  - Speciality
-  - Cancel Appointment Button
-- [ ] If **no appointments**:
-  - Display a heading message
-  - Show a button to return to Homepage
-- [ ] Cancel button must remove the appointment
-- [ ] Bookings should persist even after page reload **(use localStorage)**
+To run this project locally, follow these steps:
 
----
+1. **Clone the Repository:**
 
-## 📚 Blogs Page
+   ```bash
+   git clone https://github.com/your-username/lawyer-appointment-app.git
+   cd lawyer-appointment-app
+   ```
 
-- Design a Blog page using your own Design and creativity
-- Answer the following questions as blog articles:
+2. **Install Dependencies:**
 
-1. What is `useState` and how does it work in React?
-2. What is the purpose of `useEffect` in React?
-3. What is a custom hook in React and when should you use one?
-4. Difference between controlled and uncontrolled components. Which one is better?
-5. Tell us something about `useFormStatus()` in React.
+   ```bash
+   npm install
+   ```
 
----
+3. **Start the Development Server:**
 
-## ❌ Error Page (404)
+   ```bash
+   npm run dev
+   ```
 
-- [ ] Display a custom-designed error page on **invalid routes**
-- [ ] Must include Navbar
-- [ ] Footer **should not appear**
-- [ ] A button to redirect the user to Homepage
+4. **Visit the App:**
+   Open your browser and go to `http://localhost:5173`
 
 ---
 
-# Challenge Requirements
+## 📚 Blog Topics Covered
 
-## 📊 Recharts
-
-- Visualize appointment fees using **Recharts** (as per Figma)
-- Canceling appointments should update the chart
-- If no appointments exist, do **not** show chart
-
----
-
-## 🔢 Counting Animation
-
-- Use [`react-countup`](https://www.npmjs.com/package/react-countup) for counting animation on the Homepage
+* What is `useState` and how does it work in React?
+* What is the purpose of `useEffect` in React?
+* What is a custom hook in React and when should you use one?
+* Difference between controlled and uncontrolled components. Which one is better?
+* Tell us something about `useFormStatus()` in React
 
 ---
 
-### ➤ Logo & Title
+## 🏆 Project Highlights
 
-- Add Site Logo & Website Title
-
-### ➤ Invalid Dynamic Routes
-
-- If invalid route visited (e.g., `/lawyer/invalid-id`), show error message
-
-### ➤ Redirection & Loading States
-
-- Show a loading animation on every route change
-- App must not crash on page reload
-- Show fallback loader during data fetch on any page reload
+* Clean, modular code structure with responsive design
+* Custom error and loading states for better UX
+* Lawyer availability check before booking
+* Data persistence using browser `localStorage`
+* Recharts-based fee visualization that updates dynamically
+* Real-time counting animations using `react-countup`
+* Route-based dynamic page titles
+* Minimum 10 meaningful GitHub commits
 
 ---
 
-## ✨ Optional Features
+## 📸 Screenshot
 
-### ➤ Validate Booking Based on Availability
-
-- If today’s date doesn’t match Lawyer’s availability:
-  - Show “Lawyer is unavailable today”
-  - Show “Unavailable” badge on Lawyer cards
-
-### ➤ Dynamic Title using `useLocation()`
-
-- Change title dynamically:
-  - Booking Page → `Booking`
-  - Lawyer Details → Lawyer’s Name
-- **Do not** use third-party NPM packages
+![image](https://github.com/user-attachments/assets/50090d2a-7cf9-4d15-81f9-b3fc6a5c7484)
+![image](https://github.com/user-attachments/assets/96665dd6-5369-4e6a-b913-48fee5d66f29)
 
 ---
 
-## ✅ Notes
+## 🙌 Thank You for Visiting the Project!
 
-- Have to work with the assigned Category.
-- Minimum 10 Github Commits
-- No Lorem Ipsum
-- Image / video / resources will be relevant to the site
-- Make your project responsive
+I hope you enjoyed exploring this project. If you found it useful or inspiring, feel free to give it a ⭐ on GitHub. Your feedback is always welcome!
 
 ---
 
-Happy Coding! 🚀
+Happy Coding 🚀
+
